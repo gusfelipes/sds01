@@ -35,7 +35,6 @@ public class Game implements Serializable {
 	private List<Record> records = new ArrayList<>();
 
 	public Game() {
-		super();
 	}
 
 	public Game(Long id, String title, Platform platform) {
