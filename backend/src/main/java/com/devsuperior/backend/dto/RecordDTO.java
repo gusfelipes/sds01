@@ -3,7 +3,6 @@ package com.devsuperior.backend.dto;
 import java.io.Serializable;
 import java.time.Instant;
 
-import com.devsuperior.backend.entities.Game;
 import com.devsuperior.backend.entities.Record;
 import com.devsuperior.backend.entities.enums.Platform;
 
@@ -16,8 +15,8 @@ public class RecordDTO implements Serializable {
 	private String name;
 	private Integer age;
 	private String gameTitle;
-	private Platform platform;
-	private String genreTitle;
+	private Platform gamePlatform;
+	private String genreName;
 
 	public RecordDTO() {
 	}
@@ -29,8 +28,8 @@ public class RecordDTO implements Serializable {
 		this.name = entity.getName();
 		this.age = entity.getAge();
 		this.gameTitle = entity.getGame().getTitle();
-		this.platform = entity.getGame().getPlatform();
-		this.genreTitle = entity.getGame().getGenre().getName();
+		this.gamePlatform = entity.getGame().getPlatform();
+		this.genreName = entity.getGame().getGenre().getName();
 	}
 
 	public Long getId() {
@@ -73,20 +72,22 @@ public class RecordDTO implements Serializable {
 		this.gameTitle = gameTitle;
 	}
 
-	public Platform getPlatform() {
-		return platform;
+	public Platform getGamePlatform() {
+		return gamePlatform;
 	}
 
-	public void setPlatform(Platform platform) {
-		this.platform = platform;
+	public void setGamePlatform(Platform gamePlatform) {
+		this.gamePlatform = gamePlatform;
 	}
 
-	public String getGenreTitle() {
-		return genreTitle;
+	public String getGenreName() {
+		return genreName;
 	}
 
-	public void setGenreTitle(String genreTitle) {
-		this.genreTitle = genreTitle;
+	public void setGenreName(String genreName) {
+		this.genreName = genreName;
 	}
+
+	
 
 }
